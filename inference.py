@@ -8,12 +8,12 @@ sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)) + "/setup")
 sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)) + "/core")
 from nmt import nmt
 import argparse
-from settings import hparams, out_dir, preprocessing, score as score_settings
+from setup.settings import hparams, out_dir, preprocessing, score as score_settings
 sys.path.remove(os.path.dirname(os.path.realpath(__file__)) + "/setup")
 import tensorflow as tf
-from tokenizer import tokenize, detokenize, apply_bpe, apply_bpe_load
-from sentence import replace_in_answers, normalize_new_lines
-from scorer import score_answers
+from core.tokenizer import tokenize, detokenize, apply_bpe, apply_bpe_load
+from core.sentence import replace_in_answers, normalize_new_lines
+from core.scorer import score_answers
 sys.path.remove(os.path.dirname(os.path.realpath(__file__)) + "/core")
 import colorama
 import random

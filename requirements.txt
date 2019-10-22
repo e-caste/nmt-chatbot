@@ -1,4 +1,6 @@
-tensorflow-gpu>=1.12.0
+# this is only required for training, not executing inference.py
+# tensorflow-gpu>=1.12.0
+tensorflow==1.14.0
 tqdm
 colorama
 regex
